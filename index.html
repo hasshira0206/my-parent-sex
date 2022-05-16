@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>sample</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+  <div class="container w-75">
+  <h1 class="text-center text-info my-4">なんの意味があるのか分からんが…</h1>
+  <h2>親がいつヤったのかを計算する君</h2>
+  <input id="Y" type="number" placeholder="生まれた年を入力" class="form-control">
+  <input id="M" type="number" placeholder="生まれた月を入力" class="form-control">
+  <input id="D" type="number" placeholder="生まれた日を入力" class="form-control">
+  <input type="button" onclick="func1()" value="計算するど" class="btn btn-primary container">
+  <h3>あなたの親は…</h3>
+  <div id="ans" class="alert alert-warning" role="alert"></div>
+  </div>
+
+
+
+  <script language="javascript" type="text/javascript">
+    const ans = document.getElementById('ans');
+    const Y = document.getElementById('Y');
+    const M = document.getElementById('M');
+    const D = document.getElementById('D');
+    const func1 = () => {
+      const val = Y.value;
+      let dt=new Date(Y.value,M.value,D.value);
+      dt.setDate(dt.getDate() -250);
+      ans.innerHTML = "<h3>" + dt.getFullYear() + "年"+dt.getMonth()+"月"+dt.getDay()+"日"+"あたりにヤりました</h3>";
+    };
+  </script>
+</body>
+
+</html>

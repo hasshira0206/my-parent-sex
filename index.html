@@ -30,7 +30,7 @@
       const val = Y.value;
       let dt=new Date(Y.value,M.value,D.value);
       dt.setDate(dt.getDate() -250);
-      let kari=dt.getMonth()+1
+      let kari=dt.getMonth()+1;
       ans.innerHTML = "<h3>" + dt.getFullYear() + "年"+kari+"月"+dt.getDay()+"日"+"あたりにヤりました</h3>";
     };
   </script>

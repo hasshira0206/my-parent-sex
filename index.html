@@ -10,7 +10,7 @@
 <body class="bg-light">
   <div class="container w-75">
   <h1 class="text-center text-info my-4">なんの意味があるのか分からんが…</h1>
-  <h2>親がいつヤったのかを計算する君</h2>
+  <h2>親がいつヤったのかを計算するよ！！</h2>
   <input id="Y" type="number" placeholder="生まれた年を入力" class="form-control">
   <input id="M" type="number" placeholder="生まれた月を入力" class="form-control">
   <input id="D" type="number" placeholder="生まれた日を入力" class="form-control">
@@ -30,7 +30,7 @@
       const val = Y.value;
       let dt=new Date(Y.value,M.value,D.value);
       dt.setDate(dt.getDate() -250);
-      ans.innerHTML = "<h3>" + dt.getFullYear() + "年"+dt.getMonth()+"月"+dt.getDay()+"日"+"あたりにヤりました</h3>";
+      ans.innerHTML = "<h3>" + dt.getFullYear() + "年"+dt.getMonth()+1+"月"+dt.getDay()+"日"+"あたりにヤりました</h3>";
     };
   </script>
 </body>
